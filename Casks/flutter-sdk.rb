@@ -7,9 +7,11 @@ cask 'flutter-sdk' do
   sha256 "74ac8397ea29720f116980ea00cf60c34430be1f64489b407f7cf95553babbef"
   url "https://storage.googleapis.com/flutter_infra/releases/stable/macos/flutter_macos_v#{version}-stable.zip"
 
-  option "with-android-sdk", "Also installs Android SDK via Brew"
+  caveats do
+    "Android SDK must be installed"
+  end
 
-  depends_on cask: "android-sdk" => :optional
+#  depends_on cask: "android-sdk"
   depends_on cask: "visual-studio-code"
   depends_on :arch => :x86_64
 
