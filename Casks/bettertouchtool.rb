@@ -13,7 +13,7 @@ cask 'bettertouchtool' do
     url "https://bettertouchtool.net/releases/btt#{version}.zip"
   else
     version '2.428'
-    sha256 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'
+    sha256 'cbcd1c109668b3d0cdd78c7266ea1692ed37081cef20bab00de5594375a5e515'
 
     # bettertouchtool.net/releases was verified as official when first introduced to the cask
     url "https://bettertouchtool.net/releases/btt_#{version}_recovery_mojave.zip"
