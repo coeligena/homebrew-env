@@ -1,6 +1,6 @@
 cask 'java8-jce-strong-policy' do
   version '8.0_202'
-  sha256 :no_check
+  sha256 'f3020a3922efd6626c2fff45695d527f34a8020e938a49292561f18ad1320b59'
 
   url 'https://edelivery.oracle.com/otn-pub/java/jce/8/jce_policy-8.zip',
       :cookies => {
