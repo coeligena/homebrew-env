@@ -10,13 +10,14 @@ cask 'eid-ee' do
   pkg 'Open-EID.pkg'
 
   postflight do
+    sleep 5
     puts "Removing browser plug-ins..."
     system_command 'profiles',
                    args: ['remove', '--identifier', 'ee.ria.chrome-token-signing', '--'],
                    sudo: true
     system_command '/bin/rm',
-                   args: ['-rf', '--', '/Library/Internet\ Plug-Ins/esteidsafariplugin.webplugin',
-                                    	 '/Library/Internet\ Plug-Ins/esteidfirefoxplugin.*',
+                   args: ['-rf', '--', #'/Library/Internet\ Plug-Ins/esteidsafariplugin.webplugin',
+#                                    	 '/Library/Internet\ Plug-Ins/esteidfirefoxplugin.*',
 #                                    	 '/Library/Application\ Support/Mozilla/Extensions/\{ec8030f7-c20a-464f-9b0e-13a3a9e97384\}/\{aa84ce40-4253-a00a-8cd6-0800200f9a6*',
                                     	 '/Library/Google/Chrome/NativeMessagingHosts/chrome-token-signing.app',
                                     	 '/Library/Google/Chrome/NativeMessagingHosts/ee.ria.esteid.json',

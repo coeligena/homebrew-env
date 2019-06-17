@@ -51,9 +51,10 @@ end tell}
     system 'defaults', 'write', ENV['HOME'] + '/Library/Preferences/com.enounce.MySpeed.plist', 'UI:LicenseRemindTime', licrem
     system 'defaults', 'write', ENV['HOME'] + '/Library/Preferences/com.enounce.MySpeed.plist', 'UI:TimeSaved', timesav
     system 'defaults', 'write', ENV['HOME'] + '/Library/Preferences/com.enounce.MySpeed.plist', 'UI:TimeSavedTtl', timetot
+    system 'defaults', 'write', ENV['HOME'] + '/Library/Preferences/com.enounce.MySpeed.plist', 'UI:HookFirefoxPluginContainer', '-bool', 'true'
     system 'defaults', 'write', ENV['HOME'] + '/Library/Preferences/com.enounce.MySpeed.plist', 'UI:AutoCheckForUpdates', '-bool', 'false'
     system 'defaults', 'write', ENV['HOME'] + '/Library/Preferences/com.enounce.MySpeed.plist', 'UI:HotKeyPreferred', 'B'
-    system 'defaults', 'write', ENV['HOME'] + '/Library/Preferences/com.enounce.MySpeed.plist', 'UI:PreferredSpeed', '30'
+    system 'defaults', 'write', ENV['HOME'] + '/Library/Preferences/com.enounce.MySpeed.plist', 'UI:PreferredSpeed', '35'
     system 'defaults', 'write', ENV['HOME'] + '/Library/Preferences/com.enounce.MySpeed.plist', 'UI:maxRate', '50'
 
     sleep 5

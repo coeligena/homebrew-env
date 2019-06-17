@@ -3,12 +3,9 @@ cask 'flutter-sdk' do
   name "Flutter"
   homepage "https://www.flutter.dev"
 
-  version "1.2.1"
-  sha256 "74ac8397ea29720f116980ea00cf60c34430be1f64489b407f7cf95553babbef"
-  url "https://storage.googleapis.com/flutter_infra/releases/stable/macos/flutter_macos_v#{version}-stable.zip"
-
-  caveats do
-  end
+  version "latest"
+  sha256 "6a2554c3754322848aa6b38e449c42d5aa9149ea82bf97f168782f68a8efa0b1"
+  url "https://storage.googleapis.com/flutter_infra/releases/stable/macos/flutter_macos_v#{"1.5.4-hotfix.2"}-stable.zip"
 
   depends_on formula: "usbmuxd"
   depends_on formula: "libimobiledevice"
@@ -22,19 +19,32 @@ cask 'flutter-sdk' do
   binary "#{staged_path}/flutter/bin/flutter"
 
   postflight do
+    safe_system "#{staged_path}/flutter config --no-analytics"
     safe_system "#{staged_path}/flutter/bin/flutter doctor"
   end
 
   caveats do
     <<~EOS
-      Android SDK must be installed at environment variable ANDROID_HOME
+      Android SDK must be installed at environment variable ANDROID_SDK_ROOT
       usbmuxd should be linked:  brew link usbmuxd
+      
       Flutter analytics tracking can be DISABLED via:  flutter config --no-analytics
-      To add bash completions run:  flutter bash-completion "#{staged_path}/../flutter-bash-completion.bash.inc"
-      And add the resulting file to source via:  source '#{staged_path}/../flutter-bash-completion.bash.inc'
-      Install Cocoapods for iOS builds, and then run:  pod setup
+        # Already done automatically by this cask!
+      
       You may want to add to your profile:
         'source <(flutter bash-completion)'
+      To add bash completions run:  flutter bash-completion --overwrite "#{staged_path}/../flutter-bash-completion.bash.inc"
+      And add the resulting file to source via:  source '#{staged_path}/../flutter-bash-completion.bash.inc'
+
+      You may want to add to your profile:
+        'source <(flutter zsh-completion)'
+      To add zsh completions run:  flutter zsh-completion --overwrite "#{staged_path}/../flutter-bash-completion.zsh.inc"
+      And add the resulting file to source via:  source '#{staged_path}/../flutter-bash-completion.zsh.inc'
+
+      Install Cocoapods for iOS builds, and then run:  pod setup
+
+      You may wish to add the flutter-ROOT install location to your PATH: (It's already in /usr/local/bin !!!)
+        echo 'export PATH="#{staged_path}/bin:$PATH"' >> ~/.zshrc
     EOS
   end
 end
