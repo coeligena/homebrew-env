@@ -4,8 +4,8 @@ cask 'flutter-sdk' do
   homepage "https://www.flutter.dev"
 
   version "latest"
-  sha256 "1bd5d165c79efebfba39e4602d6e07e74b40798630eb7173caedf0f664c53035"
-  url "https://storage.googleapis.com/flutter_infra/releases/stable/macos/flutter_macos_v#{"1.7.8+hotfix.3"}-stable.zip"
+  sha256 "9bee10962848b138a0e47764de270123444fae35f6b0dc44615560eff633c634"
+  url "https://storage.googleapis.com/flutter_infra/releases/stable/macos/flutter_macos_v#{"1.9.1+hotfix.4"}-stable.zip"
 
   depends_on formula: "usbmuxd"
   depends_on formula: "libimobiledevice"
