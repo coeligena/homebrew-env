@@ -1,6 +1,6 @@
 cask 'tunnelblick-beta' do
-  version '3.8.0beta01,5330'
-  sha256 '83f0281c219e3b2d68250e8ead2d2b6e75ccd676d10de7c5270fba7b31bd40e2'
+  version '3.8.2beta01,5410'
+  sha256 'b4af8fc39d550eaf2ffe0f375fedd2dc392e8878e3d4a008c92232aded3c0cb5'
 
   # github.com/Tunnelblick/Tunnelblick was verified as official when first introduced to the cask
   url "https://github.com/Tunnelblick/Tunnelblick/releases/download/v#{version.before_comma}/Tunnelblick_#{version.before_comma}_build_#{version.after_comma}.dmg"
@@ -25,7 +25,7 @@ cask 'tunnelblick-beta' do
   zap trash: [
                '~/Library/Application Support/Tunnelblick',
                '~/Library/Caches/net.tunnelblick.tunnelblick',
-               '~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/Tunnelblick*',
+               '~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/net.tunnelblick.tunnelblick.help*',
                '~/Library/Cookies/net.tunnelblick.tunnelblick.binarycookies',
                '~/Library/Preferences/net.tunnelblick.tunnelblick.plist',
                '/Library/Application Support/Tunnelblick',
