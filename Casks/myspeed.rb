@@ -66,6 +66,7 @@ end tell}
     File.open('/tmp/remove-myspeed.sh', 'w') do |f|
       # use "\n" for two lines of text
       f.puts %Q{#!/bin/bash
+# TAKEN FROM Remove Script v6323
 # program to use apple script as part of install
 # to close all browsers and MySpeed
 #
