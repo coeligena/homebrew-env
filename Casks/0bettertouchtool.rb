@@ -1,4 +1,4 @@
-cask 'bettertouchtool' do
+cask '0bettertouchtool' do
   if MacOS.version <= :mavericks
     version '2.05'
     sha256 '41013cfeffee286a038363651db3dd315ff3a1e0cf07774d9ce852111be50a5a'
