@@ -1,4 +1,4 @@
-cask 'racket' do
+cask '0racket' do
   version '7.4'
   sha256 'abc8143c48ffb5876a975228acc5fe324b6c56e159a09f0f6e9a2a766abbb65d'
 
