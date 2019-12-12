@@ -8,6 +8,18 @@ cask 'istat-menus-helper' do
 
   installer manual: 'iStat Menus Helper Installer.app'
 
+  postflight do
+    sleep 5
+    puts 'Press Enter after installing to continue to remove artifacts...'
+    ignored = STDIN.gets
+    puts 'Removing artifacts...'
+    system_command '/bin/rm',
+                   args: [
+                           '-R',
+                           "#{staged_path}/iStat Menus Helper Installer.app",
+                         ]
+  end
+  
   uninstall quit:      [
                          'com.bjango.istatmenus.agent.mas',
                          'com.bjango.istatmenus.status.mas',
