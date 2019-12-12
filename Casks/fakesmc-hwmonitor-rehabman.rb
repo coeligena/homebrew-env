@@ -7,7 +7,6 @@ cask 'fakesmc-hwmonitor-rehabman' do
   homepage 'https://bitbucket.org/RehabMan/os-x-fakesmc-kozlek/downloads/'
 
   app 'HWMonitor.app'
-
   artifact 'FakeSMC.kext', target: "/#{ENV['HOME']}/Desktop/INSTL_THS_KXTS/FakeSMC.kext"
   artifact 'FakeSMC_SMMSensors.kext', target: "/#{ENV['HOME']}/Desktop/INSTL_THS_KXTS/FakeSMC_SMMSensors.kext"
   artifact 'FakeSMC_ACPISensors.kext', target: "/#{ENV['HOME']}/Desktop/INSTL_THS_KXTS/FakeSMC_ACPISensors.kext"

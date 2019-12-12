@@ -9,7 +9,7 @@ cask '0mps' do
 
   auto_updates true
 
-  app "MPS #{version.major_minor}.app", :target => "MPS.app"
+  app "MPS #{version.major_minor}.app", target: 'MPS.app'
 
   uninstall_postflight do
     ENV['PATH'].split(File::PATH_SEPARATOR).map { |path| File.join(path, 'mps') }.each { |path| File.delete(path) if File.exist?(path) && File.readlines(path).grep(%r{# see com.intellij.idea.SocketLock for the server side of this interface}).any? }

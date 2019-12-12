@@ -1,4 +1,4 @@
-cask 'dnscrypt' do
+cask 'dnscrypt-old' do
   version '1.0.14'
   sha256 '47da81eef9e04762e9db7141dc4fdb26681940ab747677b22af50ce79b2b48bf'
 

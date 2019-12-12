@@ -5,7 +5,8 @@ cask 'webcatalog' do
   url "https://github.com/quanglam2807/webcatalog/releases/download/v17.4.0/WebCatalog-#{version}.dmg"
   name 'WebCatalog'
   homepage 'https://getwebcatalog.com/download/mac'
-#  homepage 'https://github.com/quanglam2807/webcatalog'
+
+  #  homepage 'https://github.com/quanglam2807/webcatalog'
 
   app 'WebCatalog.app'
 end

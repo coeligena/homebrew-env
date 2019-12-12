@@ -6,6 +6,6 @@ cask 'apache-cayenne-modeler' do
   name 'Apache Cayenne Modeler'
   homepage 'https://cayenne.apache.org/download.html'
 
-  suite "cayenne-#{version}-macosx", :target => 'CayenneModeler'
-  app 'CayenneModeler.app', :target => "#{appdir}/CayenneModeler/CayenneModeler.app"
+  suite "cayenne-#{version}-macosx", target: 'CayenneModeler'
+  app 'CayenneModeler.app', target: "#{appdir}/CayenneModeler/CayenneModeler.app"
 end

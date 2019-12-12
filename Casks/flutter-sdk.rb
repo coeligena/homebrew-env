@@ -1,20 +1,16 @@
 cask 'flutter-sdk' do
+  version 'latest'
 
-  name "Flutter"
-  homepage "https://www.flutter.dev"
+  url 'https://storage.googleapis.com/flutter_infra/releases/stable/macos/flutter_macos_v1.9.1+hotfix.4-stable.zip'
 
-  version "latest"
-  sha256 "9bee10962848b138a0e47764de270123444fae35f6b0dc44615560eff633c634"
-  url "https://storage.googleapis.com/flutter_infra/releases/stable/macos/flutter_macos_v#{"1.9.1+hotfix.4"}-stable.zip"
-
-  depends_on formula: "usbmuxd"
-  depends_on formula: "libimobiledevice"
-  depends_on formula: "ideviceinstaller"
-  depends_on formula: "ios-deploy"
-#  depends_on formula: "cocoapods"
-#  depends_on cask: "android-sdk"
-  depends_on cask: "visual-studio-code"
-  depends_on :arch => :x86_64
+  depends_on formula: 'usbmuxd'
+  depends_on formula: 'libimobiledevice'
+  depends_on formula: 'ideviceinstaller'
+  depends_on formula: 'ios-deploy'
+  #  depends_on formula: "cocoapods"
+  #  depends_on cask: "android-sdk"
+  depends_on cask: 'visual-studio-code'
+  depends_on arch: :x86_64
 
   binary "#{staged_path}/flutter/bin/flutter"
 
@@ -27,10 +23,10 @@ cask 'flutter-sdk' do
     <<~EOS
       Android SDK must be installed at environment variable ANDROID_SDK_ROOT
       usbmuxd should be linked:  brew link usbmuxd
-      
+
       Flutter analytics tracking can be DISABLED via:  flutter config --no-analytics
         # Already done automatically by this cask!
-      
+
       You may want to add to your profile:
         'source <(flutter bash-completion)'
       To add bash completions run:  flutter bash-completion --overwrite "#{staged_path}/../flutter-bash-completion.bash.inc"

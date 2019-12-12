@@ -7,8 +7,7 @@ cask '0racket' do
   name 'Racket'
   homepage 'https://racket-lang.org/'
 
-  suite "Racket v#{version}", :target => 'Racket'
-
+  suite "Racket v#{version}", target: 'Racket'
   binary "#{appdir}/Racket/bin/drracket"
   binary "#{appdir}/Racket/bin/gracket"
   binary "#{appdir}/Racket/bin/gracket-text"
