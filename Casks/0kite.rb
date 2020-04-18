@@ -1,4 +1,4 @@
-cask 'kite' do
+cask '0kite' do
   version '0.20200411.0'
   sha256 '6f8bde03416a8183fb63e8b6aae316359ed41748e8ac0171d6f3dcd2e403cce5'
 
@@ -22,10 +22,10 @@ cask 'kite' do
                    args: ['disable', 'system/com.kite.KiteAutostart', '--'],
                    sudo: true
     system_command 'launchctl',
-                   args: ['disable', 'user/$(id -u)/com.kite.KiteHelper', '--'],
+                   args: ['disable', "user/#{ %x( id -u ) }/com.kite.KiteHelper", '--'],
                    sudo: false
     system_command 'launchctl',
-                   args: ['disable', 'user/$(id -u)/com.kite.KiteAutostart', '--'],
+                   args: ['disable', "user/#{ %x( id -u ) }/com.kite.KiteAutostart", '--'],
                    sudo: false
   end
 end
