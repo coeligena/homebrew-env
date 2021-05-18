@@ -1,4 +1,4 @@
-cask 'font-new-york' do
+cask 'font-ny-fonts' do
   version :latest
   sha256 :no_check
 
