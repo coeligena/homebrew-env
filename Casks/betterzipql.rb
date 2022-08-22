@@ -7,8 +7,6 @@ cask 'betterzipql' do
   name 'BetterZipQL'
   homepage 'https://macitbetter.com/BetterZip-Quick-Look-Generator/'
 
-  depends_on macos: '>= :yosemite'
-
   qlplugin 'BetterZip.app/Contents/Library/QuickLook/BetterZipQL.qlgenerator'
 
   postflight do

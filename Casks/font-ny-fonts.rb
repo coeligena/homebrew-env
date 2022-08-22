@@ -2,7 +2,7 @@ cask 'font-ny-fonts' do
   version :latest
   sha256 :no_check
 
-  url 'https://developer.apple.com/design/downloads/NY-Font.dmg'
+  url 'https://devimages-cdn.apple.com/design/resources/download/NY.dmg'
   name 'Apple New York Font'
   homepage 'https://developer.apple.com/fonts/'
 

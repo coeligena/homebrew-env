@@ -1,8 +1,8 @@
 cask 'istat-menus-helper' do
-  version '1.1'
-  sha256 'b871240085f99a81801055755aec1d230ab828b6a1518b1acee5bef46666db05'
+  version '2.0'
+  sha256 '4d29c82a55c1a49e7523c53f7d6cb483cff1a03346f88af0e0025c53604f18ff'
 
-  url 'https://files.bjango.com/istatmenushelper/istatmenushelper.zip'
+  url 'https://cdn.bjango.com/files/istatmenushelper/istatmenushelper2.0.zip'
   name 'iStat Menus Helper'
   homepage 'https://bjango.com/help/istatmenus6/helper/'
 
