@@ -6,7 +6,7 @@ cask 'macid' do
   name 'MacID'
   homepage 'https://macid.co/'
 
-  depends_on macos: [:yosemite, :el_capitan, :sierra]
+  depends_on macos: [:el_capitan, :sierra]
 
   app 'MacID.app'
 
