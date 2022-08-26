@@ -1,6 +1,6 @@
 cask 'svp' do
   version :latest
-  sha256 '8d22f980af382b9849c14943d2454bdeabc65f0270b084053e33d222a5566e3d'
+  sha256 'fb0868ce918efa988941718cf5c079be68057e0e9a2422cff95141c03dfcf012'
 
   url 'https://www.svp-team.com/files/svp4-latest.php?mac'
   name 'SVP'

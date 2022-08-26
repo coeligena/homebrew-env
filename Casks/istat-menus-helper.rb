@@ -2,9 +2,13 @@ cask 'istat-menus-helper' do
   version '2.0'
   sha256 '4d29c82a55c1a49e7523c53f7d6cb483cff1a03346f88af0e0025c53604f18ff'
 
+<<<<<<< Updated upstream
   url 'https://cdn.bjango.com/files/istatmenushelper/istatmenushelper2.0.zip'
+=======
+  url 'https://download.bjango.com/istatmenushelper/2/'
+>>>>>>> Stashed changes
   name 'iStat Menus Helper'
-  homepage 'https://bjango.com/help/istatmenus6/helper/'
+  homepage 'https://bjango.com/mas/istatmenus/helper/#v2/'
 
   installer manual: 'iStat Menus Helper Installer.app'
 
