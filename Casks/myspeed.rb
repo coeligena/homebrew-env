@@ -134,8 +134,8 @@ runAppleScript()
         on CheckForMySpeedEnabledApps()
             set runningApps to {}
             set appsToCheckList to {"MySpeed", "MySpeedInjector", "MySpeedDiagnostics", "Safari", "firefox-bin", "firefox", ¬
-                                    "Google Chrome", "Opera", "Opera Beta", "flock-bin", "Camino", "RockMelt", "Google Chrome Canary", ¬
-                                    "Citrio", "Brass", "SRWare Iron", "Chromium", ¬
+                                    "Google Chrome", "Opera", "Opera Beta", "seamonkey", "flock-bin", "Camino", "RockMelt", "Google Chrome Canary", ¬
+                                    "Citrio", "Brass", "SRWare Iron", "Vivaldi", "Chromium", ¬
                                     "RealPlayer", "mdm_flash_player" }
             repeat with theCurrentApp in appsToCheckList
                 if (ApplicationIsRunning(theCurrentApp)) then
@@ -154,6 +154,7 @@ runAppleScript()
             QuitApplication("Google Chrome", "Google Chrome")
             QuitApplication("Opera", "Opera")
             QuitApplication("Opera Internet Browser", "Opera Beta")
+            QuitApplication("seamonkey", "SeaMonkey")
             QuitApplication("flock-bin", "flock")
             QuitApplication("Camino", "Camino")
             QuitApplication("Chromium", "Chromium")
@@ -161,6 +162,7 @@ runAppleScript()
             QuitApplication("Google Chrome Canary", "Google Chrome Canary")
             QuitApplication("Citrio", "Citrio")
             QuitApplication("Brass", "Brass")
+            QuitApplication("Vivaldi", "Vivaldi")
             QuitApplication("SRWare Iron", "Chromium")
             QuitApplication("RealPlayer", "RealPlayer")
             QuitApplication("mdm_flash_player", "Wimpy FLV Player")
